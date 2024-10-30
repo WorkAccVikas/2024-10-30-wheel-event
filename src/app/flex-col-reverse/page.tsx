@@ -22,8 +22,8 @@ export default function Home() {
     <>
       <div className="mx-auto mt-8 max-w-sm">
         <div className="relative">
-          <div className="mt-2 flex h-80 flex-col-reverse overflow-scroll rounded-lg bg-white shadow">
-            <div className="p-4">
+          <div className="mt-2 h-80 rounded-lg bg-white shadow">
+            <div className="flex max-h-full flex-col-reverse overflow-scroll p-4">
               <p className="whitespace-pre-wrap text-gray-700">{text}</p>
             </div>
           </div>
