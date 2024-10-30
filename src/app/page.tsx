@@ -4,21 +4,21 @@ import { useOnResize } from "@/app/use-on-resize";
 import { ArrowPathIcon, PauseIcon, PlayIcon } from "@heroicons/react/20/solid";
 import { useEffect, useRef, useState } from "react";
 
-let characters = 150;
-let delay = 500;
+const characters = 150;
+const delay = 500;
 
 export default function Home() {
-  let [isPlaying, setIsPlaying] = useState(false);
-  let [text, setText] = useState("");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [text, setText] = useState("");
 
-  let contentRef = useRef<HTMLDivElement>(null);
-  let scrollableRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const scrollableRef = useRef<HTMLDivElement>(null);
 
   const [shouldAutoscroll, setShouldAutoscroll] = useState(true);
 
   useInterval(
     () => {
-      let newText = getNextChars(characters);
+      const newText = getNextChars(characters);
       setText((text) => text + newText);
     },
     isPlaying ? delay : null,
